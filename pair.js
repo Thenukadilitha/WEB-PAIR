@@ -85,7 +85,7 @@ router.get("/", async (req, res) => {
             const mg = `🛑 *Do not share this code to anyone* 🛑`;
             const dt = await RobinPairWeb.sendMessage(user_jid, {
               image: {
-                url: "",
+                url: "https://github.com/Thenukadilitha/WEB-PAIR/blob/main/IMG-20251020-WA0002.jpg",
               },
               caption: sid,
             });
@@ -125,8 +125,9 @@ router.get("/", async (req, res) => {
 
 process.on("uncaughtException", function (err) {
   console.log("Caught exception: " + err);
-  exec("pm2 restart Robin");
+  exec("pm2 restart Bot");
 });
 
 module.exports = router;
+
 
